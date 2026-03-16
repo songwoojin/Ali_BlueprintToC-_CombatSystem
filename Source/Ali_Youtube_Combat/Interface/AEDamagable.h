@@ -32,7 +32,7 @@ struct FDamageInfo
 	GENERATED_BODY()
 
 	float Amount;
-	EDamageType DamageType;
+	EDamageType  DamageType;
 	EDamageResponse DamageResponse;
 	bool ShouldDamageInvincible;
 	bool CanBeBlocked;

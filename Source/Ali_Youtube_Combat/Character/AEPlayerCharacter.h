@@ -10,6 +10,9 @@
  * 
  */
 
+struct FInputActionValue;
+class AAEProjectileBase;
+
 UCLASS()
 class ALI_YOUTUBE_COMBAT_API AAEPlayerCharacter : public AAEBaseCharacter
 {
@@ -26,4 +29,14 @@ protected:
 
 	UFUNCTION()
 	void InputHeal(const FInputActionValue& Value);
+
+	UFUNCTION()
+	void InputSpawnProjectile(const FInputActionValue& Value);
+
+protected:
+	UPROPERTY(VisibleAnywhere)
+	USceneComponent* ProjectileScene;
+	
+	UPROPERTY(EditAnywhere,Category="Settings|Projectile")
+	TArray<TSubclassOf<AAEProjectileBase>> ProjectilesClass;
 };

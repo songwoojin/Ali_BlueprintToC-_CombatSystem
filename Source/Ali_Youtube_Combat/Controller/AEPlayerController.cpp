@@ -23,7 +23,7 @@ void AAEPlayerController::BeginPlay()
 			{
 				if (MappingContexts[i])
 				{
-					Subsystem->AddMappingContext(MappingContexts[i],  0);
+					Subsystem->AddMappingContext(MappingContexts[i],  i);
 				}
 			}
 		}
